@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title> login in </title>
+ <style>
+ body{
+   
+    background-color:aqua;
+    border-width:10px;
+    border-color:black;
+    background:linear-gradient(rgb(205, 25, 55) violet lightblue);height:100vh;background-repeat:no-repeat;
+
+   }
+ .f1{
+   margin-top: 5%;
+   margin-left: 35%;
+   padding: auto;
+ }
+ button{
+   width: 5cm;
+   height: 30px;
+   border-radius: 10px;
+ }
+ input{
+   width: 10cm;
+   height: 20px;
+   border-radius: 20px;
+ }
+ </style>
+</head>
+<body style=" background:linear-gradient(green,blue);height:100vh;background-repeat:no-repeat;">
+<h1 style="text-align: center;"> LOGIN FORM<h1>
+   <form  method ="post" id="f1" class="f1">
+     <ul>
+     <li><label>Username:</label></li>
+     <input type="text" id="user" required><br><br>
+     <li><label>password:</label></li>
+     <input type="text" id="pass" required><small><p id="err"></p></small>
+     </ul>
+     <button type="button" style="background-color: aqua;"type="submit" onclick="validate()">Submit</button>
+     <button type="reset"value="reset">Reset</button>
+     </form><script> 
+     function validate(){
+       var a=document.getElementById('user').value;
+       var b=document.getElementById('pass').value;
+       if(a=="preethishanmugam" && b=="12345"){
+         alert('login successful');
+         document.getElementById("f1").action="calculator in js.html";
+       }
+       else{
+         document.getElementById("err").innerHTML="invalid password";
+         document.getElementById("err").style.color="red";
+         alert('login failed');
+       }      
+     }
+     </script></body>
+</html>
